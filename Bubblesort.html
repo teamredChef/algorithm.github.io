@@ -1,0 +1,53 @@
+<html>
+    <head>
+        Hier komt bubble sort
+    </head>
+    
+    <body>
+        <p4>I'm sorry bubble bubble bubble</p4>
+
+        <script>
+            function main() {
+            var aantal;
+
+            window.alert("Geef aantal getallen op");
+            aantal = Number(window.prompt('Enter a value for aantal'));
+            var nummers = createArray(aantal);
+            var teller;
+
+            for (teller = 0; teller <= nummers.length - 1; teller++) {
+            nummers[teller] = Math.floor(Math.random() * 100);
+            }
+            weergaveArray(nummers);
+            sorteer(nummers);
+            }
+
+            function sorteer(nummers) {
+            var i;
+            var j;
+            var temp;
+
+            for (i = 0; i <= nummers.length - 1; i++) {
+            for (j = 0; j <= nummers.length - i - 2; j++) {
+            if (nummers[j] > nummers[j + 1]) {
+                temp = nummers[j];
+                nummers[j] = nummers[j + 1];
+                nummers[j + 1] = temp;
+            }
+            }
+            }
+            window.alert("De gesorteerde waarde zijn");
+            weergaveArray(nummers);
+            }
+
+            function weergaveArray(nummers) {
+            var teller;
+
+            for (teller = 0; teller <= nummers.length - 1; teller++) {
+            window.alert(nummers[teller]);
+            }
+            }
+
+        </script>
+    </body>
+</html>
