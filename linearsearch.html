@@ -1,0 +1,36 @@
+<html>
+    <head>
+        Hier komt mijn linear search
+    </head>
+
+    <body>
+        function main() {
+            var zoekGetal, i;
+            var getallenRij = createArray(10);
+        
+            for (i = 0; i <= 9; i++) {
+                getallenRij[i] = Math.floor(Math.random() * 100);
+            }
+            window.alert("Welk getal wil je zoeken: ");
+            zoekGetal = Number(window.prompt('Enter a value for zoekGetal'));
+            i = 0;
+            var geradenPlaats;
+        
+            // Wat moet er in de WHILE-lus komen om het algoritme te laten werken?
+            while (i < 10) {
+                if (zoekGetal == getallenRij[i]) {
+                    window.alert("Getal gevonden");
+                    i = 11;
+                } else {
+                    i = i + 1;
+                }
+            }
+            if (i == 10) {
+                window.alert("Getal niet gevonden.");
+            } else {
+                window.alert(zoekGetal.ToString() + " staat op plek " + i);
+            }
+        }
+        
+    </body>
+</html>
