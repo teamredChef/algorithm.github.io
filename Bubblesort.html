@@ -16,50 +16,78 @@
 
         <p><video width="500px" height="auto" controls="controls"> <!--Filmpje instructies-->
                 <source src="STAYC(스테이씨) 'Bubble' MV (480P).mp4" type="video/mp4" /> <!--Link naar filmpje-->
-            </video></p>
+            </video>
+        </p>
+
+        <button onclick="Bubblesort()">Ik ben voor bubble sort!</button>
 
         <script>
-            function main() {
-            var aantal;
+            function Bubblesort() {
+                var aantal;
+                    window.alert("Geef aantal getallen op");
+                aantal = Number(window.prompt('Enter a value for aantal'));
 
-            window.alert("Geef aantal getallen op");
-            aantal = Number(window.prompt('Enter a value for aantal'));
-            var nummers = createArray(aantal);
-            var teller;
+                var nummers = new Array(aantal);
+                var teller;
 
-            for (teller = 0; teller <= nummers.length - 1; teller++) {
-            nummers[teller] = Math.floor(Math.random() * 100);
-            }
-            weergaveArray(nummers);
-            sorteer(nummers);
-            }
+                for (teller = 0; teller <= nummers.length - 1; teller++) {
+                nummers[teller] = Math.floor(Math.random() * 100);
+                }
+                weergaveArray(nummers);
+                var welke;
+                welke = window.prompt('Wil je de lijst van groot naar klein of van klein naar groot sorteren?');
 
-            function sorteer(nummers) {
-            var i;
-            var j;
-            var temp;
+                if (welke == "groot naar klein") {
+                    Omgekeerdsorteren(nummers);
+                } else {
+                    sorteer(nummers);
+                }
 
-            for (i = 0; i <= nummers.length - 1; i++) {
-            for (j = 0; j <= nummers.length - i - 2; j++) {
-            if (nummers[j] > nummers[j + 1]) {
-                temp = nummers[j];
-                nummers[j] = nummers[j + 1];
-                nummers[j + 1] = temp;
-            }
-            }
-            }
-            window.alert("De gesorteerde waarde zijn");
-            weergaveArray(nummers);
-            }
+                function Omgekeerdsorteren(nummers) {
+                    // hier worden de cijfers van groot naar klein te sorteren
+                    var i;
+                    var j;
+                    var temp;
 
-            function weergaveArray(nummers) {
-            var teller;
+                    for (i = 0; i <= nummers.length - 1; i++) {
+                        for (j = 0; j <= nummers.length - i - 2; j++) {
+                            if (nummers[j] < nummers[j + 1]) {
+                                temp = nummers[j];
+                                nummers[j] = nummers[j + 1];
+                                nummers[j + 1] = temp;
+                            }  
+                        }
+                    }
+                    window.alert("De gesorteerde waarde zijn");
+                    weergaveArray(nummers);
+                }
 
-            for (teller = 0; teller <= nummers.length - 1; teller++) {
-            window.alert(nummers[teller]);
-            }
-            }
+                function sorteer(nummers) { // dit programma sorteert de waarden van klein naar groot
+                var i;
+                var j;
+                var temp;
 
+                for (i = 0; i <= nummers.length - 1; i++) {
+                    for (j = 0; j <= nummers.length - i - 2; j++) {
+                        if (nummers[j] > nummers[j + 1]) {
+                            temp = nummers[j];
+                            nummers[j] = nummers[j + 1];
+                            nummers[j + 1] = temp;
+                        }
+                    }
+                }
+                window.alert("De gesorteerde waarde zijn");
+                weergaveArray(nummers);
+                }
+
+                function weergaveArray(nummers) {
+                    var teller;
+
+                    for (teller = 0; teller <= nummers.length - 1; teller++) {
+                        window.alert(nummers[teller]);
+                    }
+                }
+            }
         </script>
     </body>
 </html>
