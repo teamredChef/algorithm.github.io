@@ -30,8 +30,5 @@ body { /*dit zijn de waarden voor de body*/
 
 .column { 
     float:right; 
-    width: 30%; 
-    padding: 15px;
-    font-family: Georgia, 'Times New Roman', Times, serif; /*dit geeft de text fonts aan die worden gebruikt*/
     margin-bottom: 5%;
   }
