@@ -24,26 +24,27 @@
             for (i = 0; i <= 49; i++) {
                 getallenRij[i] = Math.floor(Math.random() * 100);
             }
-            window.alert("Welk getal wil je zoeken: ");
-            zoekGetal = Number(window.prompt('Enter a value for zoekGetal'));
+            
+            zoekGetal = Number(window.prompt('Welk getal wil je zoeken?'));
             i = 0;
             var geradenPlaats;
         
-            // Wat moet er in de WHILE-lus komen om het algoritme te laten werken?
+            geradenPlaats = 0
             while (i < 10) {
                 if (zoekGetal == getallenRij[i]) {
                     window.alert("Getal gevonden");
+                    geradenPlaats = i
                     i = 11;
-                } else {
-                    i = i + 1;
+                    } else {
+                        i = i + 1;
+                    }
                 }
-            }
             if (i == 10) {
                 window.alert("Getal niet gevonden.");
             } else {
                 window.alert(zoekGetal.ToString() + " staat op plek " + i);
             }
-            }
+        }
         </script>
     </body>
 </html>
