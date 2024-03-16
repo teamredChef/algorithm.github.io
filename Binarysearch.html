@@ -49,7 +49,7 @@
                 found = false;
 
                 while (first < last && found == false) {
-                    midpoint = Math.abs((double) (first + last) / 2); //het midpoint wordt hier elke keer opnieuw berekent, omdat je elke keer weer een nieuw begin en eind hebt door de loop 
+                    midpoint = Math.abs((first + last) / 2); //het midpoint wordt hier elke keer opnieuw berekent, omdat je elke keer weer een nieuw begin en eind hebt door de loop 
                     if (nummers[midpoint] == zoekGetal) {
                      found = true;
                     } else {
