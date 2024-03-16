@@ -21,18 +21,18 @@
             </p>
         </div>
 
-        <button onclick="Bubblesort()">Ik ben voor bubble sort!</button>
+        <button onclick="Bubblesort()">Ik wil bubble sort starten!</button>
 
         <script>
             function Bubblesort() {
                 var aantal;
                     window.alert("Geef aantal getallen op");
-                aantal = Number(window.prompt('Enter a value for aantal'));
+                aantal = Number(window.prompt('Vul het aantal getallen in die je wilt sorteren'));
 
-                var nummers = new Array(aantal);
+                var nummers = new Array(aantal); //door aantal neer te zetten als hoeveelheid kun je het array zo groot maken als je wilt
                 var teller;
 
-                for (teller = 0; teller <= nummers.length - 1; teller++) {
+                for (teller = 0; teller <= nummers.length - 1; teller++) { //deze for loop genereert een random getal voor elke plek in het array
                 nummers[teller] = Math.floor(Math.random() * 100);
                 }
                 weergaveArray(nummers);
@@ -46,7 +46,7 @@
                 }
 
                 function Omgekeerdsorteren(nummers) {
-                    // hier worden de cijfers van groot naar klein te sorteren
+                    // hier worden de cijfers van groot naar klein gesorteerd
                     var i;
                     var j;
                     var temp;
@@ -82,7 +82,7 @@
                 weergaveArray(nummers);
                 }
 
-                function weergaveArray(nummers) {
+                function weergaveArray(nummers) { //dit programma weergeeft de nummers in het array één voor één 
                     var teller;
 
                     for (teller = 0; teller <= nummers.length - 1; teller++) {
