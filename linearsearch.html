@@ -12,12 +12,16 @@
             <li><a href="index.html">home</a></li>
         </ul><!--hier eindigt de unordened list-->
 
+        <H2>Linear search</H2>
+
+        <button onclick="liniairSearch()">Ik wil linear search starten!</button>
+
         <script>
-            function main() {
+            function linearSearch() {
             var zoekGetal, i;
-            var getallenRij = createArray(10);
+            var getallenRij = new Array(50);
         
-            for (i = 0; i <= 9; i++) {
+            for (i = 0; i <= 49; i++) {
                 getallenRij[i] = Math.floor(Math.random() * 100);
             }
             window.alert("Welk getal wil je zoeken: ");
