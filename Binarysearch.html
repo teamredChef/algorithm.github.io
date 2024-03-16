@@ -41,7 +41,6 @@
 
                 while (first < last && found == false) {
                     midpoint = Math.abs((double) (first + last) / 2); //het midpoint wordt hier elke keer opnieuw berekent, omdat je elke keer weer een nieuw begin en eind hebt door de loop 
-
                     if (nummers[midpoint] == zoekGetal) {
                      found = true;
                     } else {
@@ -55,14 +54,13 @@
                         found = false;
                     }
                 }
-
+                
                 if (found == true) {
                     window.alert("Het getal staat in de lijst");
                 } else {
                     window.alert("Getal niet gevonden");
                 }
                 
-
                 function sorteer(nummers) {
                     var i;
                     var j;
