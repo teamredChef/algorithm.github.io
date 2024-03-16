@@ -26,6 +26,5 @@ li a:hover:not(.active) { background-color: #ff7701;
 body { /*dit zijn de waarden voor de body*/
     background-color: #ef9098; /*dit is de achtergrondkleur van de body*/
     color: #fcc31a; /*dit is de tekstkleur van de body*/ 
-    float: left;
 }
   
