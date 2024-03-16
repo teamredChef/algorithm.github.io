@@ -12,67 +12,73 @@
             <li><a href="linearsearch.html">linear search</a></li>
         </ul><!--hier eindigt de unordened list-->
 
+        <button onclick="Binarysearch()">Ik wil binary search starten!</button>
+
         <script>
-            function main() {
-            var nummers = createArray(50);
-            var teller;
+            function Binarysearch() {
+                var nummers = new Array(50);
+                var teller;
 
-            for (teller = 0; teller <= 49; teller++) {
-            nummers[teller] = Math.floor(Math.random() * 100);
-            }
-            sorteer(nummers);
-            var zoekGetal;
+                for (teller = 0; teller <= 49; teller++) {
+                nummers[teller] = Math.floor(Math.random() * 100);
+                }
+                sorteer(nummers);
+                var zoekGetal;
 
-            window.alert("Welk getal wil je zoeken tussen de 0 en 100: ");
-            zoekGetal = Number(window.prompt('Enter a value for zoekGetal'));
-            var first;
+                window.alert("Welk getal wil je zoeken tussen de 0 en 100: ");
+                zoekGetal = Number(window.prompt('Enter a value for zoekGetal'));
 
-            first = 0;
-            var last;
-
-            last = teller - 1;
-            var midpoint;
-            var found;
-
-            found = false;
-            while (first < last && found == false) {
-            midpoint = Math.abs((double) (first + last) / 2);
-            if (nummers[midpoint] == zoekGetal) {
-            found = true;
-            } else {
-            if (zoekGetal < midpoint) {
-                first = midpoint;
-                last = teller - 1;
-            } else {
-                last = midpoint;
+                var first;
                 first = 0;
-            }
-            found = false;
-            }
-            }
-            if (found == true) {
-            window.alert("Het getal staat in de lijst");
-            } else {
-            window.alert("Getal niet gevonden");
-            }
-            }
 
-            function sorteer(nummers) {
-            var i;
-            var j;
-            var temp;
+                var last;
+                last = teller - 1;
 
-            for (i = 0; i <= nummers.length - 1; i++) {
-            for (j = 0; j <= nummers.length - i - 2; j++) {
-            if (nummers[j] > nummers[j + 1]) {
-                temp = nummers[j];
-                nummers[j] = nummers[j + 1];
-                nummers[j + 1] = temp;
-            }
-            }
-            }
-            }
+                var midpoint;
 
+                var found;
+                found = false;
+
+                while (first < last && found == false) {
+                    midpoint = Math.abs((double) (first + last) / 2); //het midpoint wordt hier elke keer opnieuw berekent, omdat je elke keer weer een nieuw begin en eind hebt door de loop 
+
+                    if (nummers[midpoint] == zoekGetal) {
+                     found = true;
+                    } else {
+                        if (zoekGetal < midpoint) {
+                            first = midpoint;
+                            last = teller - 1;
+                        } else {
+                            last = midpoint;
+                            first = 0;
+                        }
+                        found = false;
+                    }
+                }
+
+                if (found == true) {
+                    window.alert("Het getal staat in de lijst");
+                } else {
+                    window.alert("Getal niet gevonden");
+                }
+                
+
+                function sorteer(nummers) {
+                    var i;
+                    var j;
+                    var temp;
+
+                    for (i = 0; i <= nummers.length - 1; i++) {
+                        for (j = 0; j <= nummers.length - i - 2; j++) {
+                            if (nummers[j] > nummers[j + 1]) {
+                                temp = nummers[j];
+                                nummers[j] = nummers[j + 1];
+                                nummers[j + 1] = temp;
+                            }
+                        }
+                    }
+                }
+            }    
         </script>
     </body>
 </html>
