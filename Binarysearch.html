@@ -54,11 +54,10 @@
                         found = false;
                     }
                 }
-                
-                if (found == true) {
-                    window.alert("Het getal staat in de lijst");
-                } else {
+                if (found == false) {
                     window.alert("Getal niet gevonden");
+                } else {
+                    window.alert("Het getal staat in de lijst");
                 }
                 
                 function sorteer(nummers) {
