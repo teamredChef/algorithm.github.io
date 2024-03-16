@@ -1,0 +1,30 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+  
+li {float: left;
+}
+  
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+  
+.active { background-color: #04AA6D;
+}
+  
+li a:hover:not(.active) { background-color: black;
+}
+
+body { /*dit zijn de waarden voor de body*/
+    background-color: black; /*dit is de achtergrondkleur van de body*/
+    color: greenyellow; /*dit is de tekstkleur van de body*/ 
+}
+  
