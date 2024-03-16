@@ -20,7 +20,7 @@ li a {
 .active { background-color: #04AA6D;
 }
   
-li a:hover:not(.active) { background-color: black;
+li a:hover:not(.active) { background-color: #fcc31a;
 }
 
 body { /*dit zijn de waarden voor de body*/
