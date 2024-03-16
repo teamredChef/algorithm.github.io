@@ -25,17 +25,17 @@
 
         <script>
             function Binarysearch() {
-                var nummers = new Array(50);
+                var nummers = new Array(50); //door new array wordt er een nieuw array aangemaakt
                 var teller;
 
                 for (teller = 0; teller <= 49; teller++) {
-                nummers[teller] = Math.floor(Math.random() * 100);
+                nummers[teller] = Math.floor(Math.random() * 100); //door deze loop, wordt er voor elke plek in de array een random getal gegenereerd
                 }
-                sorteer(nummers);
+                sorteer(nummers); //zie function sorteer(nummers)
                 var zoekGetal;
 
                 window.alert("Welk getal wil je zoeken tussen de 0 en 100: ");
-                zoekGetal = Number(window.prompt('Enter a value for zoekGetal'));
+                zoekGetal = Number(window.prompt('Vul een getal in dat je wilt zoeken')); //hier zorgt het programma ervoor dat er een pop-up komt met deze vraag
 
                 var first;
                 first = 0;
@@ -48,7 +48,7 @@
                 var found;
                 found = false;
 
-                while (first < last && found == false) {
+                while (first < last && found == false) { //door hier een twee eisen te stellen hoef je minder in de loop te zetten voordat ie er uit springt.
                     midpoint = Math.abs((first + last) / 2); //het midpoint wordt hier elke keer opnieuw berekent, omdat je elke keer weer een nieuw begin en eind hebt door de loop 
                     if (nummers[midpoint] == zoekGetal) {
                      found = true;
