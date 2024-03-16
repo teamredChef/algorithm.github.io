@@ -18,33 +18,33 @@
 
         <script>
             function linearSearch() {
-            var zoekGetal, i;
-            var getallenRij = new Array(50);
+                var zoekGetal, i;
+                var getallenRij = new Array(50);
         
-            for (i = 0; i <= 49; i++) {
-                getallenRij[i] = Math.floor(Math.random() * 100);
-            }
+                for (i = 0; i <= 49; i++) {
+                    getallenRij[i] = Math.floor(Math.random() * 100);
+                }
             
-            zoekGetal = Number(window.prompt('Welk getal wil je zoeken?'));
-            i = 0;
-            var geradenPlaats;
+                zoekGetal = Number(window.prompt('Welk getal wil je zoeken?'));
+                i = 0;
+             var geradenPlaats;
         
-            geradenPlaats = 0
-            while (i < 10) {
-                if (zoekGetal == getallenRij[i]) {
-                    window.alert("Getal gevonden");
-                    geradenPlaats = i
-                    i = 11;
+             geradenPlaats = 0
+                while (i < 10) {
+                    if (zoekGetal == getallenRij[i]) {
+                        window.alert("Getal gevonden");
+                        geradenPlaats = i
+                        i = 11;
                     } else {
                         i = i + 1;
                     }
                 }
-            if (i == 10) {
-                window.alert("Getal niet gevonden.");
-            } else {
-                window.alert(zoekGetal.ToString() + " staat op plek " + i);
+                if (i == 10) {
+                    window.alert("Getal niet gevonden.");
+                } else {
+                    window.alert(zoekGetal.ToString() + " staat op plek " + i);
+                }
             }
-        }
         </script>
     </body>
 </html>
